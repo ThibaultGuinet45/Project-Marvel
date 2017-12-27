@@ -1,6 +1,8 @@
 <?php
 
-	class LoginController {
+	require_once "controller.php";
+
+	class LoginController extends Controller {
 		public function login(array $user): ?string { // Typage donnée en sortie (Null ou string);
 			if(!isset($user["email"]) || !isset($user["password"])) // Verification de l'existance
 				return "view/no-connect/login.php";
@@ -20,11 +22,6 @@
 			else
 				return "view/no-connect/login.php";
 		}
-
-		public function validateEmail(string $email): bool {
-			return (filter_var($email, FILTER_VALIDATE_EMAIL)) ? true : false;
-		}
-
 	}
 
 ?>

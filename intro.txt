@@ -1,0 +1,5 @@
+Model View Controler
+
+View = page HTML
+Model = Requête
+Controler = Traite la donnée
